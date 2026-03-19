@@ -1,0 +1,8 @@
+zone "example.com" {
+type master;
+file "/etc/named/dns/db.example.com"; # zone file path
+};
+zone "1.168.192.in-addr.arpa" {
+type master;
+file "/etc/named/dns/db.1.168.192"; # 192.168.1.0/24 podset' moya
+};
