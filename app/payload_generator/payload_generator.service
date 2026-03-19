@@ -1,0 +1,11 @@
+[Unit]
+Description=Payload generator
+After=network.target
+
+[Service]
+WorkingDirectory=/opt/registrator/payload_generator
+ExecStart=/usr/local/bin/python3.10 app.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
