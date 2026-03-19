@@ -1,0 +1,24 @@
+---
+- targets:
+  - app-vb-1.example.com:9100
+  labels:
+    job: node
+    instance: app-vb-1
+
+- targets:
+  - dns-vb-1.example.com:9100
+  labels:
+    job: node
+    instance: dns-vb-1
+
+- targets:
+  - gitlab-vb-1.example.com:9100
+  labels:
+    job: node
+    instance: gitlab-vb-1
+
+- targets:
+  - grafana-vb-1.example.com:9100
+  labels:
+    job: node
+    instance: grafana-vb-1
