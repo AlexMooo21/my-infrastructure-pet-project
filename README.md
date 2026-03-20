@@ -95,7 +95,47 @@ my-devops/sre-project/
 
 · Docker / Docker Compose
 
-📊 Мониторинг
+🚀 Приложение
+
+Python-приложение, состоящее из двух компонентов:
+
+· registrator — регистрирует пользователей в PostgreSQL
+
+· payload generator — генерирует случайные данные для нагрузки
+
+![Maket](screenshots/maket.png)
+
+Приложение используется как тестовый сервис, за которым осуществляется наблюдение и сопровождение.
+
+Запись ведётся в PostgreSQL
+
+![PostgreSQL](screenshots/postgr.png)
+
+🌐 DNS сервер
+
+Локальный DNS-сервер на базе Bind.
+
+Используется для:
+
+резолвинга имён сервисов внутри инфраструктуры
+
+упрощения взаимодействия между виртуальными машинами
+
+📂 GitLab
+
+Развернут собственный GitLab Community Edition.
+
+Используется для:
+
+хранения кода
+
+управления версиями
+
+имитации production-like среды разработки
+
+![GitlabCE](screenshots/gitlab.png)
+
+📊 Мониторинг - Prometheus
 
 Реализовано:
 
@@ -105,9 +145,27 @@ my-devops/sre-project/
 
 · Мониторинг DNS (Bind Exporter)
 
+![Prometheus](screenshots/prometheus.png)
+
+![RulesPrometheus](screenshots/rules_prometheus.png)
+
+![Prometheus_graph](screenshots/prometheus_graph.png)
+
 · Визуализация в Grafana
 
+![Grafana](screenshots/grafana.png)
+
+![Node_g](screenshots/node_grafana.png)
+
+![Bind_g](screenshots/bind_grafana.png)
+
+![Blackbox_g](screenshots/blackbox_grafana.png)
+
 · Алертинг через Telegram-бота
+
+![Alert1](screenshots/alert_(1).png)
+
+![Alert2](screenshots/alert_(2).png)
 
 📷 Примеры:
 
