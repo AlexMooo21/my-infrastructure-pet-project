@@ -235,4 +235,4 @@ junior DevOPS/SRE Engineer
   
 - Telegram: @ynazaf721
 
-- Mail: mohov.lexa@list.ru
+- Mail: z-aero@list.ru
