@@ -161,50 +161,78 @@ Python-приложение, состоящее из двух компонент
 
 ![Blackbox_g](screenshots/blackbox_grafana.png)
 
-· Алертинг через Telegram-бота
+🚨 Алертинг
 
+Алертинг через Telegram-бота
+
+Срабатывает при:
+
+· недоступности приложения
+
+· проблемах с DNS
+
+· высокой нагрузке 
+
+    к примеру: - CPU usage > 80% (5 min)
+               - Memory usage > 75%
+               - Service down (Blackbox probe failed)
+               - и так далее
+               
 ![Alert1](screenshots/alert_(1).png)
 
 ![Alert2](screenshots/alert_(2).png)
 
-📷 Примеры:
-
 🐳 Контейнеризация
 
-Приложение переведено в Docker-контейнеры:
+Приложения registrator и payload generator контейнеризированы с использованием Docker.
 
-registrator
+Для каждого сервиса:
 
-payload generator
+· создан отдельный Dockerfile
 
-Используется docker-compose для запуска.
+· собран Docker-образ
 
-▶️ Запуск (Docker)
-cd docker
-docker-compose up -d
+· контейнеры запускаются отдельно
 
-🎯 Цели проекта
+Это позволяет:
 
-Практика DevOps-навыков
+· изолировать компоненты приложения
 
-Настройка мониторинга и алертинга
+· упростить развёртывание
 
-Работа с инфраструктурой из нескольких узлов
+📦 Сборка образов
 
-Контейнеризация приложений
+cd /app/registrator
+docker build -t registrator .         # Сборка образа registrator
 
-📎 Итог
+cd /app/payload_generator
+docker build -t payload_generator .   # Сборка образа payload_generator
 
-Проект демонстрирует базовые навыки DevOps-инженера:
+docker run -d --name registrator registrator              # Запуск контейнера с registrator
 
-работа с инфраструктурой
+docker run -d --name payload-generator payload-generator  # Запуск контейнера с payload_generator
 
-мониторинг
+# В текущей реализации используется ручной запуск контейнеров.
+# В дальнейшем планируется переход на docker-compose или Kubernetes.
 
-контейнеризация
+🎯 Цели и итоги проекта
 
-организация сервисов
+· Практика DevOps/SRE-навыков
+
+· Настройка мониторинга и алертинга
+
+· Работа с инфраструктурой из нескольких узлов
+
+· Контейнеризация приложений
 
 👤 Автор
 
-DevOps Engineer (junior)
+Мохов Алексей (AlexMooo21)
+
+junior DevOPS/SRE Engineer 
+
+- GitHub: https://github.com/AlexMooo21
+  
+- Telegram: @ynazaf721
+
+- Mail: mohov.lexa@list.ru
