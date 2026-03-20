@@ -59,6 +59,7 @@ my-devops-project/
 ⚙️ Технологии
 
 · Python 3
+
 · PostgreSQL
 · GitLab CE
 · Bind DNS
